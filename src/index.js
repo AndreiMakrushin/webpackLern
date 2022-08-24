@@ -1,5 +1,7 @@
 import  countdowntimer  from "./modules/countdowntimer.js"
-import  modTwo  from "./modules/two.js"
+import  menu  from "./modules/menu.js"
+import modal from "./modules/modal.js"
 
 countdowntimer('26 aug 2022');
-modTwo();
+menu();
+modal();
