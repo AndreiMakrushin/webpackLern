@@ -1,4 +1,4 @@
-const modOne = (dedline) => {
+const countdowntimer = (dedline) => {
     const timerHours = document.getElementById('timer-hours')
     const timerMinutes = document.getElementById('timer-minutes')
     const timerSeconds = document.getElementById('timer-seconds')
@@ -44,4 +44,4 @@ const modOne = (dedline) => {
     setInterval(updateClock, 1000);
 };
 
-export default modOne('24 aug 2022')
+export default countdowntimer()
