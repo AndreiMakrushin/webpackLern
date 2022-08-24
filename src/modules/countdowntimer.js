@@ -7,7 +7,7 @@ const countdowntimer = (dedline) => {
     const getTimeRemaining = () => {
         let dateStop = new Date(dedline).getTime();
         let dateNow = new Date().getTime();
-        let timeRemaining = (dateStop - dateNow) / 1000 + 5300;
+        let timeRemaining = (dateStop - dateNow) / 1000;
         let seconds = 0;
         let minutes = 0;
         let hours = 0;
@@ -22,7 +22,7 @@ const countdowntimer = (dedline) => {
 //--------------------------------------------------------------------------------
 
     const updateClock = () => {
-        let timer = getTimeRemaining();
+        let timer = getTimeRemaining('26 aug 2022');
         timerHours.textContent = timer.hours;
         timerMinutes.textContent = timer.minutes;
         timerSeconds.textContent = timer.seconds;
@@ -44,4 +44,4 @@ const countdowntimer = (dedline) => {
     setInterval(updateClock, 1000);
 };
 
-export default countdowntimer()
+export default countdowntimer
