@@ -22,7 +22,7 @@ const countdowntimer = (dedline) => {
 //--------------------------------------------------------------------------------
 
     const updateClock = () => {
-        let timer = getTimeRemaining('26 aug 2022');
+        let timer = getTimeRemaining();
         timerHours.textContent = timer.hours;
         timerMinutes.textContent = timer.minutes;
         timerSeconds.textContent = timer.seconds;

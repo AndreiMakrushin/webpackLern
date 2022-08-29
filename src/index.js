@@ -7,7 +7,7 @@ import tabs from "./modules/tabs"
 
 
 
-countdowntimer('26 aug 2022');
+countdowntimer('4 sep 2022');
 menu();
 modal();
 btmanimate();
