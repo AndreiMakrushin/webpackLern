@@ -1,7 +1,7 @@
 const slider = () =>{
     const sliderBlock = document.querySelector('.portfolio-content');
     const slides = document.querySelectorAll('.portfolio-item');
-    const timeInterval = 2000;
+    const timeInterval = 5000;
 	const portfolioDots = document.querySelector('.portfolio-dots');
     let currentSlide = 0;
     let interval;
@@ -13,7 +13,7 @@ const slider = () =>{
             portfolioDots.appendChild(dot);
         });
         portfolioDots.children[0].classList.add('dot-active');
-        console.log(portfolioDots)
+        
     };
     createDot()
 //-------------------------------------------------------------------------------

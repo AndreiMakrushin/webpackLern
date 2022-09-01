@@ -11,7 +11,7 @@ const menu = ()=>{
             menu.classList.remove('active-menu')
         }else if (e.target.closest('ul>li>a')){
             menu.classList.remove('active-menu')
-        }else{
+        }else if (!e.target.closest('menu')){
             menu.classList.remove('active-menu')
         }
    })

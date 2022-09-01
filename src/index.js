@@ -5,7 +5,7 @@ import btmanimate from "./modules/btmanimate"
 import validate from "./modules/validate"
 import tabs from "./modules/tabs"
 import slider from "./modules/slider"
-
+import calculator from "./modules/calculator"
 
 countdowntimer('4 sep 2022');
 menu();
@@ -14,3 +14,4 @@ btmanimate();
 validate();
 tabs();
 slider();
+calculator(100)
