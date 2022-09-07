@@ -36,12 +36,12 @@ const validate = () =>{
 //---------------------------------------------------------------------------------------------------
 
     valName.forEach(valName => valName.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ]/g, "")
+        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ ]/g, "")
     }))
 //----------------------------------------------------------------------------------------------------
 
     valMessage.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ \s]/g, "")
+        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ 0-9 , . - \s]/g, "")
     })
 
 }

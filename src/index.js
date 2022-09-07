@@ -6,13 +6,24 @@ import validate from "./modules/validate"
 import tabs from "./modules/tabs"
 import slider from "./modules/slider"
 import calculator from "./modules/calculator"
+import sendForm from "./modules/sendForm"
 
-
-countdowntimer('4 sep 2022');
+countdowntimer('10 sep 2022');
 menu();
 modal();
 btmanimate();
 validate();
 tabs();
 slider();
-calculator(100)
+calculator(100);
+sendForm({
+    idForm: 'form1',
+    idForm2: 'form2',
+    idForm3: 'form3',
+    someElem:[
+        {
+            type: 'block',
+            id: 'total'
+        }
+    ]
+});
