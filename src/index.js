@@ -9,7 +9,7 @@ import calculator from "./modules/calculator"
 import sendForm from "./modules/sendForm"
 
 
-countdowntimer('10 sep 2022');
+countdowntimer('31 dec 2022');
 menu();
 modal();
 btmanimate();

@@ -1,5 +1,6 @@
 const sendForm = ({ idForm, someElem = [] }) => {
     const form = document.getElementById(idForm);
+    const btn = document.querySelectorAll('.form-btn')
     const statusBlock = document.createElement('div')
     const loadText = 'Загрузка...'
     const errorText = 'Ошибка'
@@ -35,6 +36,7 @@ const sendForm = ({ idForm, someElem = [] }) => {
         }).then(res => res.json())
     }
     //-------------------------------------------------------------------------------------------------
+    
 
     const submitForm = () => {
         const formElements = form.querySelectorAll('input')
@@ -63,27 +65,49 @@ const sendForm = ({ idForm, someElem = [] }) => {
                     formElements.forEach(input => {
                         input.value = ''
                     })
+                    setTimeout(clear, 3000)
                 }).catch(error => {
                     statusBlock.textContent = errorText
                 })
+                
         } else {
             alert('Данные не валидны!')
         }
     }
     //---------------------------------------------------------------------------------------------
     //-------------------------------------------------------------
+    
+    
+    const formElements = form.querySelectorAll('input')
+   
+
     try {
-        if (!form, !form2, !form3) {
+        if (!form) {
             throw new Error('Верните форму на место');
         }
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            submitForm();
-        })
-
+        
+            form.addEventListener('submit', (event)=>{
+                event.preventDefault();
+            let count = 0;
+                formElements.forEach(el =>{
+                    if (el.type === 'email' && el.value === '' || el.type === 'tel' && el.value === '' || el.type === 'text' && el.value === '') {
+                        count++ 
+                        console.log(count)
+                    }
+                })
+                if (count === 0) {
+                     submitForm();
+                 }
+            })
+            
+            
     } catch (error) {
         console.log(error.message)
     }
+    const clear = () =>{
+        statusBlock.textContent = ''
+    }
+    
 
 }
 export default sendForm

@@ -42,6 +42,7 @@ const countdowntimer = (dedline) => {
         }
     };
     setInterval(updateClock, 1000);
+    updateClock()
 };
 
 export default countdowntimer
