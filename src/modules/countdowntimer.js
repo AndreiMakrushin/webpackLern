@@ -37,11 +37,12 @@ const countdowntimer = (dedline) => {
         }
         
         if (timer.timeRemaining < 0) {
-            clearInterval(setInterval(updateClock, 1000));
-            
+            clearInterval(id); 
         }
+
     };
-    setInterval(updateClock, 1000);
+  let id = setInterval(updateClock, 1000);
+    
     updateClock()
 };
 
