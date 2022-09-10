@@ -1,6 +1,6 @@
 const sendForm = ({ idForm, someElem = [] }) => {
     const form = document.getElementById(idForm);
-    const btn = document.querySelectorAll('.form-btn')
+    const formElements = form.querySelectorAll('input')
     const statusBlock = document.createElement('div')
     const loadText = 'Загрузка...'
     const errorText = 'Ошибка'
@@ -75,12 +75,6 @@ const sendForm = ({ idForm, someElem = [] }) => {
         }
     }
     //---------------------------------------------------------------------------------------------
-    //-------------------------------------------------------------
-    
-    
-    const formElements = form.querySelectorAll('input')
-   
-
     try {
         if (!form) {
             throw new Error('Верните форму на место');
@@ -92,9 +86,9 @@ const sendForm = ({ idForm, someElem = [] }) => {
                 formElements.forEach(el =>{
                     if (el.type === 'email' && el.value === '' || el.type === 'tel' && el.value === '' || el.type === 'text' && el.value === '') {
                         count++ 
-                        console.log(count)
                     }
                 })
+                
                 if (count === 0) {
                      submitForm();
                  }

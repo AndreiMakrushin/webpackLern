@@ -10,38 +10,38 @@ const validate = () =>{
 
     calcInputs.forEach((calcInput) => {
         calcInput.addEventListener('input', (e) => {
-            e.target.value = e.target.value.replace(/\D/g, '')
+            e.target.value = e.target.value.replace(/\D/g, '').trim()
         })
     })
 //----------------------------------------------------------------------------------------
 
     valPhone.forEach(valPhone => valPhone.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^+() 0-9 -]+(.*)/, '$1')
+        e.target.value = e.target.value.replace(/[^+() 0-9 -]+(.*)/, '$1').trim()
     }))
 //---------------------------------------------------------------------------------------------
 
     valPhoneModal.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^+() 0-9 -]+(.*)/, '$1')
+        e.target.value = e.target.value.replace(/[^+() 0-9 -]+(.*)/, '$1').trim()
     })
 //-------------------------------------------------------------------------------------------------
 
     valEmail.forEach(valEmail => valEmail.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^@ - _ .! ~ * ' a-z A-Z 0-9]+(.*)/, '$1')
+        e.target.value = e.target.value.replace(/[^@ - _ .! ~ * ' a-z A-Z 0-9]+(.*)/, '$1').trim()
     }))
 //---------------------------------------------------------------------------------------------------
 
     valEmailModal.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^@ - _ .! ~ * ' a-z A-Z 0-9]+(.*)/, '$1')
+        e.target.value = e.target.value.replace(/[^@ - _ .! ~ * ' a-z A-Z 0-9]+(.*)/, '$1').trim()
     })
 //---------------------------------------------------------------------------------------------------
 
     valName.forEach(valName => valName.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ ]/g, "")
+        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ ]/g, "").trim()
     }))
 //----------------------------------------------------------------------------------------------------
 
     valMessage.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ 0-9 , . - \s]/g, "")
+        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ 0-9 , . - \s]/g, "").trim()
     })
 
 }
