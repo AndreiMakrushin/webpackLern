@@ -41,7 +41,7 @@ const validate = () =>{
 //----------------------------------------------------------------------------------------------------
 
     valMessage.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ 0-9 , . - \s]/g, "").trim()
+        e.target.value = e.target.value.replace(/[^а-яёА-ЯЁ 0-9 , . - \s]/g, "")
     })
 
 }
